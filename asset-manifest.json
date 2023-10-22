@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ProyectoFinalReact_MaximilianoTrochon/static/css/main.9d5c1800.css",
+    "main.js": "/ProyectoFinalReact_MaximilianoTrochon/static/js/main.3bae5a3c.js",
+    "static/js/787.deeec6c3.chunk.js": "/ProyectoFinalReact_MaximilianoTrochon/static/js/787.deeec6c3.chunk.js",
+    "static/media/Fondo1.webp": "/ProyectoFinalReact_MaximilianoTrochon/static/media/Fondo1.b1de937dbd43d5e9debd.webp",
+    "index.html": "/ProyectoFinalReact_MaximilianoTrochon/index.html",
+    "main.9d5c1800.css.map": "/ProyectoFinalReact_MaximilianoTrochon/static/css/main.9d5c1800.css.map",
+    "main.3bae5a3c.js.map": "/ProyectoFinalReact_MaximilianoTrochon/static/js/main.3bae5a3c.js.map",
+    "787.deeec6c3.chunk.js.map": "/ProyectoFinalReact_MaximilianoTrochon/static/js/787.deeec6c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d5c1800.css",
+    "static/js/main.3bae5a3c.js"
+  ]
+}
