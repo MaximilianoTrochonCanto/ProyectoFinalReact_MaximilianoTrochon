@@ -1,0 +1,19 @@
+.itemdetail{
+    border-radius: 30%;    
+    background:radial-gradient(rgb(255, 201, 85),rgb(148, 124, 59));
+    text-align: center;
+}
+
+.itemdetail{
+    font-weight: bold;
+}
+
+
+.itemdetail img{
+    width: 40%;
+    border-radius: 50%;
+}
+
+.volver{
+    width: 10%;
+}

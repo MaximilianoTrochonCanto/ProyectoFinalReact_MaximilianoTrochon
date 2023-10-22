@@ -1,0 +1,15 @@
+.itemlist{
+    margin: 0 auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productos{
+    
+    margin: 2%;
+}
+
+.Navegar{
+    background-color:  rgb(83, 21, 21) !important;
+}

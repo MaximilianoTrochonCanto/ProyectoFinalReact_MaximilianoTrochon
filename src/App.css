@@ -2,37 +2,30 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.producto, .randomusers{        
+  background:radial-gradient(rgb(255, 201, 85),rgb(148, 124, 59));
+  margin: 1%;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
+  background-image: url(../public/imagenes/Fondo1.webp) ;
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.boton{
+  background-color: rgb(150, 30, 30) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2{
+  background-color: black;
+  border-radius: 10px;
+  color: rgb(255, 232, 132) !important;
+  display: inline-block ;
 }
+
+
+
+

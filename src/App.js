@@ -1,25 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {NavbarBootstrap } from './componentes/nav/navbar/navbar';
+import { Accesorios } from './paginas/Accesorios';
+import { Calzado } from './paginas/Calzado';
+import { Remeras } from './paginas/Remeras';
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
+import ItemDetail from './componentes/itemDetail/itemDetail';
+import { ContextProvider } from './context/context';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+return(
+    <div>
+      
+    
+      <ContextProvider>
+    <Router>
+      <header>
+        <NavbarBootstrap/>
       </header>
+      <Routes>
+        <Route path="/ProyectoFinalReact_MaximilianoTrochon/" element={<Remeras/>} />            
+        <Route path="/" element={<Remeras/>} />            
+        <Route path="/ProyectoFinalReact_MaximilianoTrochon/remeras" element={<Remeras/>} />            
+        <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado' element={<Calzado/>}/>            
+        <Route path='/ProyectoFinalReact_MaximilianoTrochon/accesorios' element={<Accesorios />}/>          
+        <Route path="/ProyectoFinalReact_MaximilianoTrochon/:productId" element={<ItemDetail/>} />            
+        <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado/:productId' element={<ItemDetail/>}/>            
+        <Route path='/ProyectoFinalReact_MaximilianoTrochon/accesorios/:productId' element={<ItemDetail/>}/>           
+        </Routes>
+    </Router>
+    </ContextProvider> 
     </div>
-  );
+    
+  )
+  
 }
 
 export default App;

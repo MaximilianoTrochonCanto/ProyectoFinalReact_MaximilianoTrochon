@@ -1,0 +1,16 @@
+.Navbar{
+    background:linear-gradient(rgb(83, 21, 21),rgb(150, 30, 30)) !important
+}
+
+
+@media (max-width:440px){
+    .Navbar{
+        font-size: xx-small;
+    }
+}
+
+.navlink{
+    color: white;
+    text-decoration: none;
+    margin:0 2%;
+}

@@ -1,0 +1,20 @@
+
+
+.botondetalle{
+    margin-left:4% ;
+
+    
+}
+
+.producto{
+    font-weight: bold;
+}
+
+.producto img{
+    width: 10%;
+    border-radius: 50%;
+}
+
+.no-disponible{
+    text-decoration: line-through;
+}
