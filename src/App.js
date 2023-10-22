@@ -24,12 +24,9 @@ return(
       <Routes>
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/" element={<Remeras/>} />            
         <Route path="/" element={<Remeras/>} />            
-        {/* <Route path="/ProyectoFinalReact_MaximilianoTrochon/remeras" element={<Remeras/>} />             */}
-        <Route path="/remeras" element={<Remeras/>} />            
-        {/* <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado' element={<Calzado/>}/>             */}
-        <Route path='/calzado' element={<Calzado/>}/>            
-        {/* <Route path='/ProyectoFinalReact_MaximilianoTrochon/accesorios' element={<Accesorios />}/>           */}
-        <Route path='/accesorios' element={<Accesorios />}/>          
+        <Route path="/ProyectoFinalReact_MaximilianoTrochon/remeras" element={<Remeras/>} />                     
+        <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado' element={<Calzado/>}/>                    
+        <Route path='/ProyectoFinalReact_MaximilianoTrochon/accesorios' element={<Accesorios />}/>                             
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/:productId" element={<ItemDetail/>} />            
         <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado/:productId' element={<ItemDetail/>}/>            
         <Route path='/ProyectoFinalReact_MaximilianoTrochon/accesorios/:productId' element={<ItemDetail/>}/>           
