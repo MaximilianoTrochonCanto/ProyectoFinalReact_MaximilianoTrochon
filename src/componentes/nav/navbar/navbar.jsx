@@ -8,7 +8,7 @@ import './navbar.css'
 import { Accesorios } from '../../../paginas/Accesorios';
 import { Remeras } from '../../../paginas/Remeras';
 import { Calzado } from '../../../paginas/Calzado';
-import { NavLink } from 'react-bootstrap';
+import { NavDropdown, NavLink } from 'react-bootstrap';
 
 
 
@@ -23,9 +23,21 @@ export const NavbarBootstrap = ({carrito}) => {
     <Container>
       <Navbar.Brand>Ventasmania</Navbar.Brand>
       <Nav className="me-auto">
-        <Nav.Link as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/remeras">Remeras</Nav.Link>
-        <Nav.Link as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/calzado">Calzado</Nav.Link>
-        <Nav.Link as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/accesorios">Accesorios</Nav.Link>
+        <NavDropdown title="Ropa">
+          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/remeras">Remeras</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/calzado">Calzado</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/accesorios">Accesorios</NavDropdown.Item>        
+        </NavDropdown>
+        <NavDropdown title="Vehículos">
+          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/motos">Motos</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/autos">Autos</NavDropdown.Item>
+          
+        </NavDropdown>
+        <NavDropdown title="Electrodomésticos">
+          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/televisores">Televisores</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/heladeras">Heladeras</NavDropdown.Item>
+          
+        </NavDropdown>
       </Nav>     
               
         <Cartwidget  />                                       

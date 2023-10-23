@@ -27,20 +27,12 @@ const ItemDetail = () => {
   }
 
   const editarStock = async(cantidad) =>{    
-    const q = query(collection(db,"Productos"))
-    const querySnapshot = await getDocs(q)
-    let pID = '';
-        querySnapshot.forEach((pr) => {
-       
-          pID = pr.id;
-        });
-
     const producto = doc(db,"Productos",productId)
 
     await updateDoc(producto,{
       stock: prod.stock - cantidad
     })
-    
+    setProd({...prod, stock: prod.stock - cantidad})
   }
   
   console.log(cantidadAgrega)

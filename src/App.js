@@ -9,6 +9,10 @@ import ItemDetail from './componentes/itemDetail/itemDetail';
 import { ContextProvider } from './context/context';
 import Cart from './componentes/cart/cart';
 import Checkout from './componentes/checkout/checkout';
+import Motos from './paginas/Motos';
+import Autos from './paginas/Autos';
+import Televisores from './paginas/Televisores';
+import Heladeras from './paginas/Heladeras';
 
 
 
@@ -31,6 +35,10 @@ return(
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/remeras" element={<Remeras/>} />                     
         <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado' element={<Calzado/>}/>                    
         <Route path='/ProyectoFinalReact_MaximilianoTrochon/accesorios' element={<Accesorios />}/>                             
+        <Route path='/ProyectoFinalReact_MaximilianoTrochon/motos' element={<Motos/>}/>                             
+        <Route path='/ProyectoFinalReact_MaximilianoTrochon/autos' element={<Autos/>}/>                             
+        <Route path='/ProyectoFinalReact_MaximilianoTrochon/televisores' element={<Televisores/>}/>                             
+        <Route path='/ProyectoFinalReact_MaximilianoTrochon/heladeras' element={<Heladeras/>}/>                             
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/:productId" element={<ItemDetail/>} />            
         <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado/:productId' element={<ItemDetail/>}/>            
         <Route path='/ProyectoFinalReact_MaximilianoTrochon/accesorios/:productId' element={<ItemDetail/>}/>           

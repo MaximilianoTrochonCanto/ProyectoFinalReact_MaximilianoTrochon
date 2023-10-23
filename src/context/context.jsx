@@ -24,8 +24,13 @@ export const ContextProvider = (props) => {
         }))
     };
 
-    const borrarTodo = () => {
+    const borrarTodo = () => {        
         setCarritoItems([])
+    }
+
+    const reintegrarStock = () => {
+        carritoItems.forEach((c) => borrarItem(c.id))
+        borrarTodo()
     }
 
     const estaEnCarrito = (id) =>{
@@ -41,15 +46,10 @@ export const ContextProvider = (props) => {
     }
 
     const editarStock = async(cant,productoId,prod) =>{    
-        const q = query(collection(db,"Productos"))
-        console.log(productoId)
-        
-        const querySnapshot = await getDocs(q)
-        
-    
+           
         const producto = doc(db,"Productos",productoId)
             
-            console.log(cant)
+       
         await updateDoc(producto,{
           stock: prod.stock
         })
@@ -67,7 +67,7 @@ export const ContextProvider = (props) => {
         return carritoItems.reduce((acc, item) => acc + item.precio * item.cantidad, 0)
     }
 
-const contextValues = {carritoItems, agregarAlCarrito,  borrarTodo, borrarItem, carritoCantidad, carritoTotal}
+const contextValues = {carritoItems, reintegrarStock, agregarAlCarrito,  borrarTodo, borrarItem, carritoCantidad, carritoTotal}
 
 
   return <CarritoContext.Provider value={contextValues}>{props.children}</CarritoContext.Provider>
