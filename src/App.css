@@ -20,9 +20,11 @@ body{
   min-height: 100vh;
 }
 
+
 .boton{
   background-color: rgb(150, 30, 30) !important;
 }
+
 
 h2{
   background-color: black;

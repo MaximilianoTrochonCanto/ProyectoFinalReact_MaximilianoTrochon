@@ -12,7 +12,7 @@ const Checkout = () => {
     const [usuario,setUsuario] = useState({})
     const [validarMail,setValidarMail] = useState('')
     const [orderId,setOrderId] = useState('')
-    const {carritoItems,carritoTotal, borrarTodo} = useContext(CarritoContext)
+    const {carritoItems,carritoTotal, reintegrarStock, borrarTodo } = useContext(CarritoContext)
 
     const datosComprador = (e) => {
         setUsuario({
@@ -32,7 +32,8 @@ const Checkout = () => {
         const ventas = collection(db, "Ordenes")
         addDoc(ventas,orden).then((res) => { 
             setOrderId(res.id)
-            borrarTodo()
+            borrarTodo();
+            reintegrarStock();
         })
         .catch((error) => console.log(error))
     }

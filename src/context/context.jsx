@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react'
-import {collection, doc,  getDocs, getFirestore, updateDoc, query} from 'firebase/firestore'
+import React, { createContext, useState } from 'react'
+import { doc,  getFirestore, updateDoc } from 'firebase/firestore'
 
 export const CarritoContext = createContext()
 
@@ -13,14 +13,10 @@ export const ContextProvider = (props) => {
   const [carritoItems, setCarritoItems] = useState([])
 
     const agregarAlCarrito = (prod,cantidad) => {
-        if(!estaEnCarrito(prod.id)){
-        //prod.stock = prod.stock - cantidad        
-        setCarritoItems([...carritoItems, {...prod,cantidad}])    
-        }else
-        setCarritoItems(carritoItems.map((p) => {
-        if(p.id === prod.id)            
-            return {...p, cantidad: p.cantidad + cantidad}
-           else return p
+        (!estaEnCarrito(prod.id))               
+        ?setCarritoItems([...carritoItems, {...prod,cantidad}])            
+        :setCarritoItems(carritoItems.map((p) => {
+        return(p.id === prod.id)?{...p, cantidad: p.cantidad + cantidad}:p
         }))
     };
 
@@ -29,35 +25,39 @@ export const ContextProvider = (props) => {
     }
 
     const reintegrarStock = () => {
-        carritoItems.forEach((c) => borrarItem(c.id))
+        carritoItems.forEach((c) => editarStock(c.id,c.cantidad,carritoItems.find((i) => i.id === c.id)))
         borrarTodo()
     }
+
+    
 
     const estaEnCarrito = (id) =>{
         return carritoItems.some((item) => item.id == id)
     }
 
     const borrarItem = (id) => {
-        let prod = carritoItems.find((item) => item.id === id)  
-        let cant = prod.cantidad
-        
+                        
         setCarritoItems(carritoItems.filter((item) => item.id !== id))
-        editarStock(cant,id,prod)
+        
     }
 
-    const editarStock = async(cant,productoId,prod) =>{    
+    const editarStock = async(productoId,cant,prod) =>{    
            
         const producto = doc(db,"Productos",productoId)
             
        
         await updateDoc(producto,{
-          stock: prod.stock
+          stock: prod.stock - cant
         })
         
-      }
+    }
 
-    console.log(carritoItems)
-
+    
+    const carritoCantidadProd = (id) => {
+        
+        const p = carritoItems.find((c) => c.id === id)
+        return (p!==undefined)? p.cantidad : 0;
+    } 
 
     const carritoCantidad = () => {
         return carritoItems.reduce((acc, item) => acc + item.cantidad, 0)
@@ -67,7 +67,7 @@ export const ContextProvider = (props) => {
         return carritoItems.reduce((acc, item) => acc + item.precio * item.cantidad, 0)
     }
 
-const contextValues = {carritoItems, reintegrarStock, agregarAlCarrito,  borrarTodo, borrarItem, carritoCantidad, carritoTotal}
+const contextValues = {carritoItems, carritoCantidadProd, reintegrarStock, agregarAlCarrito,  borrarTodo, borrarItem, carritoCantidad, carritoTotal}
 
 
   return <CarritoContext.Provider value={contextValues}>{props.children}</CarritoContext.Provider>

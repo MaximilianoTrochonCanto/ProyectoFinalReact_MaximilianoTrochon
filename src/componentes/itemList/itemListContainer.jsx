@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {collection, doc, getDoc, getDocs, getFirestore} from 'firebase/firestore'
+import {collection, getDocs, getFirestore} from 'firebase/firestore'
 
 import Item from '../item/item'
 import './itemListContainer.css'
@@ -10,7 +10,7 @@ const ItemListContainer = ({categoria,greetings}) => {
       
     const [prods,setProds] = useState([])
     const db = getFirestore();
-    //const productosfiltrados = ProductosFirebase().filter(p => p.categoria == categoria)
+    
     
     useEffect(() =>{
         const pCollection = collection(db, "Productos")

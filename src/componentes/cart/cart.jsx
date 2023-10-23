@@ -5,7 +5,7 @@ import CartItem from '../cartItem/cartItem'
 
 
 const Cart = () => {
-    const {carritoItems, reintegrarStock, carritoTotal} = useContext(CarritoContext)
+    const {carritoItems, borrarTodo ,  carritoTotal} = useContext(CarritoContext)
 
     console.log(carritoItems)
     return (
@@ -15,7 +15,7 @@ const Cart = () => {
                 {carritoItems.map((i) => <CartItem  key={i.id} item = {i} />)}
                 <p>Total a pagar: ${carritoTotal()}</p>
                 <div>
-                    <button className='btn btn-danger' onClick={() => reintegrarStock()}>Vaciar Carrito</button>
+                    <button className='btn btn-danger' onClick={() => borrarTodo()}>Vaciar Carrito</button>
                     <Link className='btn btn-dark' to="/ProyectoFinalReact_MaximilianoTrochon/checkout" >Terminar compra</Link>
                 </div>
             </div>

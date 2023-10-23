@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Cartwidget from '../cartwidget/cartwidget';
-import {BrowserRouter as Router,Link,Route,Routes} from "react-router-dom"
+import {BrowserRouter as Link} from "react-router-dom"
 import './navbar.css'
-import { Accesorios } from '../../../paginas/Accesorios';
-import { Remeras } from '../../../paginas/Remeras';
-import { Calzado } from '../../../paginas/Calzado';
-import { NavDropdown, NavLink } from 'react-bootstrap';
+
+import { NavDropdown} from 'react-bootstrap';
 
 
 

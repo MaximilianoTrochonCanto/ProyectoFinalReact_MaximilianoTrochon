@@ -19,7 +19,7 @@ const Item = (props) => {
     
     <div className='producto'>
       
-      {(stock>0)?<p><img src={urlImagen}/> {categoria}: {nombre} (${precio})<Button as={Link} to={url} params={{producto: props.data}} className='boton botondetalle' variant="primary">Ver detalle</Button></p>:<p ><img src={urlImagen}/> <span className='no-disponible'>{categoria}: {nombre} (no disponible) </span> <Button as={Link} to={url} className='boton botondetalle' variant="primary">Ver detalle</Button></p>}
+      {(stock>0)?<p><img src={urlImagen}/> {categoria}: {nombre} (${precio})<Button as={Link} to={url} params={{producto: props.data}} className='boton botondetalle' variant="primary">Ver detalle</Button></p>:<p ><img src={urlImagen}/> <span className='no-disponible'>{categoria}: {nombre} (no disponible) </span> <Button as={Link} to={url}  className='boton botondetalle' variant="primary">Ver detalle</Button></p>}
     
     </div>
     

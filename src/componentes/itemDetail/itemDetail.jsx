@@ -4,38 +4,30 @@ import "./itemDetail.css"
 import Button from 'react-bootstrap/esm/Button'
 import Randomusers from '../../randomUsers/randomusers'
 import { CarritoContext } from '../../context/context'
-import {collection, doc, getDoc, getDocs, getFirestore, Firestore, updateDoc, query} from 'firebase/firestore'
+import {collection, doc, getDoc,  getFirestore } from 'firebase/firestore'
 import ItemCount from '../itemCount/itemCount'
-import {update, ref} from 'firebase/database'
+
 
 
 const ItemDetail = () => {
   const {productId} = useParams()
   const [prod,setProd] = useState({})
 
-  const {quitarDeCarrito, agregarAlCarrito} = useContext(CarritoContext)
+  const {agregarAlCarrito} = useContext(CarritoContext)
   const db = getFirestore();
   const [cantidadAgrega, setCantidadAgrega] = useState('')
-  const [estaEdit,setEstaEdit] = useState(false)
+  
 
   
 
   const onAdd = (cantidad) => {
     setCantidadAgrega(cantidad)    
     agregarAlCarrito(prod, cantidad)
-    editarStock(cantidad)
+    
   }
 
-  const editarStock = async(cantidad) =>{    
-    const producto = doc(db,"Productos",productId)
-
-    await updateDoc(producto,{
-      stock: prod.stock - cantidad
-    })
-    setProd({...prod, stock: prod.stock - cantidad})
-  }
   
-  console.log(cantidadAgrega)
+  
 
    useEffect(() =>{
     const collectionPro = collection(db, "Productos")
@@ -56,8 +48,30 @@ const ItemDetail = () => {
 
   let url;
  
-  (prod.categoria === "Remera")?url = `/ProyectoFinalReact_MaximilianoTrochon`:(prod.categoria === "Accesorio")?url = `/ProyectoFinalReact_MaximilianoTrochon/accesorios`:url = `/ProyectoFinalReact_MaximilianoTrochon/calzado`;
-  
+   switch(prod.categoria){
+    case "Remera":
+      url =  `/ProyectoFinalReact_MaximilianoTrochon`
+    break;
+    case "Accesorio":
+      url = `/ProyectoFinalReact_MaximilianoTrochon/accesorios`;
+    break;
+    case "Calzado":
+      url =  `/ProyectoFinalReact_MaximilianoTrochon/calzado`;
+    break;
+    case "Auto":
+      url =  `/ProyectoFinalReact_MaximilianoTrochon/autos`;
+    break;
+    case "Moto":
+      url =  `/ProyectoFinalReact_MaximilianoTrochon/motos`;
+    break;
+    case "Heladera":
+      url =  `/ProyectoFinalReact_MaximilianoTrochon/heladeras`;
+      break;
+    case "Televisor":
+      url =  `/ProyectoFinalReact_MaximilianoTrochon/televisores`;
+    break;
+   }
+
     return (
         <div className='text-center'>
 
@@ -67,7 +81,7 @@ const ItemDetail = () => {
       <img src={prod.urlImagen} />
       {(prod.stock<0 && prod != null )?<p style={{color:"red"}}>Sin stock.</p>:<p>Stock: {prod.stock}</p>}      
       <p>Precio: ${prod.precio}</p> 
-      { cantidadAgrega === '' ? <ItemCount inicial={1} stock={prod.stock} onAdd={onAdd}/>
+      { cantidadAgrega === '' ? <ItemCount inicial={1} stock={prod.stock} id={prod.id} onAdd={onAdd}/>
       : <Link to="/ProyectoFinalReact_MaximilianoTrochon/cart" className='btn btn-dark'>Ir al Carrito</Link>}
       </div>                    
       <Button className="boton " as={Link} to={url}>Volver</Button>

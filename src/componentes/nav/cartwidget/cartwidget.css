@@ -11,7 +11,7 @@
     border-radius: 50%;
     position: absolute;
     top:-39px;
-    right:-500px;
+    right:-470px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@
 @media (max-width:990px){
     .notificacion::after{
         top:-31px;
-        right:-320px;
+        right:-250px;
     }    
 }
 @media (max-width:768px){
@@ -40,7 +40,7 @@
     .notificacion::after{
         top:-31px;
         
-        right:-161px;
+        right:-101px;
     }    
 }
 @media (max-width:577px){
