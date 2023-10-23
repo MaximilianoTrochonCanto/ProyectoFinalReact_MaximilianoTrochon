@@ -1,22 +1,38 @@
-import React, { useEffect } from 'react'
-import { productos } from '../../productos/productos'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import {collection, doc, getDoc, getDocs, getFirestore} from 'firebase/firestore'
+
 import Item from '../item/item'
 import './itemListContainer.css'
-import Button from 'react-bootstrap/Button';
-import {Router,Link,Route,Routes} from "react-router-dom"
 
 
 
 const ItemListContainer = ({categoria,greetings}) => {
       
-    const productosfiltrados = productos.filter(p => p.categoria == categoria)
+    const [prods,setProds] = useState([])
+    const db = getFirestore();
+    //const productosfiltrados = ProductosFirebase().filter(p => p.categoria == categoria)
+    
+    useEffect(() =>{
+        const pCollection = collection(db, "Productos")
+        getDocs(pCollection).then((snapshot) => {          
+            setProds(snapshot.docs.map((doc) =>({ id: doc.id, ...doc.data() })))                        
+        })
+        
+
+
+    },[])
+
+    const prodsFilter = prods.filter(p => p.categoria == categoria)
+
+
     return (
+        
         
         <div className='container itemlist'>
 
         <div className='productos col-10'>
-            {productosfiltrados.map((product) => (
+            
+            {prodsFilter.map((product) => (
                 
                 <Item key={product.id} data={product}/>
                 
@@ -24,7 +40,7 @@ const ItemListContainer = ({categoria,greetings}) => {
                 ))}
         </div>
         </div>
-        
+            
     )        
     
 

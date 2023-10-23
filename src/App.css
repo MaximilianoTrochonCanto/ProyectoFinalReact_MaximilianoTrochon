@@ -2,10 +2,15 @@
   text-align: center;
 }
 
-.producto, .randomusers{        
+.producto, .randomusers, .formulario{        
   background:radial-gradient(rgb(255, 201, 85),rgb(148, 124, 59));
   margin: 1%;
   text-align: center;
+}
+
+.formulario{
+  margin: 2% auto;
+  width:75%;
 }
 
 body{

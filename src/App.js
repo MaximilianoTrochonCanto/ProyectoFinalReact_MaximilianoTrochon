@@ -7,6 +7,8 @@ import { Remeras } from './paginas/Remeras';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import ItemDetail from './componentes/itemDetail/itemDetail';
 import { ContextProvider } from './context/context';
+import Cart from './componentes/cart/cart';
+import Checkout from './componentes/checkout/checkout';
 
 
 
@@ -24,6 +26,8 @@ return(
       <Routes>
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/" element={<Remeras/>} />            
         <Route path="/" element={<Remeras/>} />            
+        <Route path="/ProyectoFinalReact_MaximilianoTrochon/cart" element={<Cart/>} />            
+        <Route path="/ProyectoFinalReact_MaximilianoTrochon/checkout" element={<Checkout/>} />            
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/remeras" element={<Remeras/>} />                     
         <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado' element={<Calzado/>}/>                    
         <Route path='/ProyectoFinalReact_MaximilianoTrochon/accesorios' element={<Accesorios />}/>                             

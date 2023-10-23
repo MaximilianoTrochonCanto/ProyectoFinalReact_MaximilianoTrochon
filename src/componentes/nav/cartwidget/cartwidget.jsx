@@ -2,14 +2,22 @@ import React, { useContext } from 'react'
 import './cartwidget.css'
 import { CarritoContext } from '../../../context/context'
 
+import { NavLink } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+
 const Cartwidget = () => {
 
-  const {carritoItems} = useContext(CarritoContext)
-  console.log(carritoItems)
+  const {carritoItems, carritoCantidad} = useContext(CarritoContext)
+  
   return (
       <>
-    <div className='notificacion' current-count={Object.values(carritoItems).reduce((a, b) => a + b, 0)}></div>
-    <img src="/ProyectoFinalReact_MaximilianoTrochon/imagenes/cart.png" className='cart' alt="" />
+    {(carritoCantidad()>0 && <div className='notificacion' current-count={carritoCantidad()}></div>)}
+    
+      <Link to="/ProyectoFinalReact_MaximilianoTrochon/cart">
+      <img className='cart' src="/ProyectoFinalReact_MaximilianoTrochon/imagenes/cart.png"  alt="" />
+      </Link>
+      
+    
       </>
   )
 }

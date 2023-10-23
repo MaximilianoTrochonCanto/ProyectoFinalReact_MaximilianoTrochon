@@ -8,6 +8,7 @@ import './navbar.css'
 import { Accesorios } from '../../../paginas/Accesorios';
 import { Remeras } from '../../../paginas/Remeras';
 import { Calzado } from '../../../paginas/Calzado';
+import { NavLink } from 'react-bootstrap';
 
 
 
@@ -25,8 +26,10 @@ export const NavbarBootstrap = ({carrito}) => {
         <Nav.Link as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/remeras">Remeras</Nav.Link>
         <Nav.Link as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/calzado">Calzado</Nav.Link>
         <Nav.Link as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/accesorios">Accesorios</Nav.Link>
-      </Nav>
-            <Cartwidget/>                                
+      </Nav>     
+              
+        <Cartwidget  />                                       
+      
     </Container>
   </Navbar>
   <div>
