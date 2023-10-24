@@ -28,6 +28,7 @@ return(
         <NavbarBootstrap/>
       </header>
       <Routes>
+        <Route path="/" element={<Remeras/>} />                                    
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/" element={<Remeras/>} />                                    
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/cart" element={<Cart/>} />                    
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/checkout" element={<Checkout/>} />            
