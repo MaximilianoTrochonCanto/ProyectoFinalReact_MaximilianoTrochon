@@ -32,6 +32,8 @@ return(
         <Route path="/" element={<Remeras/>} />            
         <Route path="/remeras" element={<Remeras/>} />            
         <Route path="/cart" element={<Cart/>} />            
+        <Route path="/ProyectoFinalReact_MaximilianoTrochon/cart" element={<Cart/>} />            
+
         {/* <Route path="/ProyectoFinalReact_MaximilianoTrochon/cart" element={<Cart/>} />             */}
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/checkout" element={<Checkout/>} />            
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/remeras" element={<Remeras/>} />                     
