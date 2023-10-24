@@ -28,9 +28,11 @@ return(
         <NavbarBootstrap/>
       </header>
       <Routes>
-        <Route path="/ProyectoFinalReact_MaximilianoTrochon/" element={<Remeras/>} />            
+        {/* <Route path="/ProyectoFinalReact_MaximilianoTrochon/" element={<Remeras/>} />             */}
         <Route path="/" element={<Remeras/>} />            
-        <Route path="/ProyectoFinalReact_MaximilianoTrochon/cart" element={<Cart/>} />            
+        <Route path="/remeras" element={<Remeras/>} />            
+        <Route path="/cart" element={<Cart/>} />            
+        {/* <Route path="/ProyectoFinalReact_MaximilianoTrochon/cart" element={<Cart/>} />             */}
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/checkout" element={<Checkout/>} />            
         <Route path="/ProyectoFinalReact_MaximilianoTrochon/remeras" element={<Remeras/>} />                     
         <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado' element={<Calzado/>}/>                    
