@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/ProyectoFinalReact_MaximilianoTrochon/static/css/main.a3ee52a5.css",
-    "main.js": "/ProyectoFinalReact_MaximilianoTrochon/static/js/main.35733293.js",
+    "main.js": "/ProyectoFinalReact_MaximilianoTrochon/static/js/main.70fb0c99.js",
     "static/js/787.deeec6c3.chunk.js": "/ProyectoFinalReact_MaximilianoTrochon/static/js/787.deeec6c3.chunk.js",
     "static/media/Fondo1.webp": "/ProyectoFinalReact_MaximilianoTrochon/static/media/Fondo1.b1de937dbd43d5e9debd.webp",
     "index.html": "/ProyectoFinalReact_MaximilianoTrochon/index.html",
     "main.a3ee52a5.css.map": "/ProyectoFinalReact_MaximilianoTrochon/static/css/main.a3ee52a5.css.map",
-    "main.35733293.js.map": "/ProyectoFinalReact_MaximilianoTrochon/static/js/main.35733293.js.map",
+    "main.70fb0c99.js.map": "/ProyectoFinalReact_MaximilianoTrochon/static/js/main.70fb0c99.js.map",
     "787.deeec6c3.chunk.js.map": "/ProyectoFinalReact_MaximilianoTrochon/static/js/787.deeec6c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a3ee52a5.css",
-    "static/js/main.35733293.js"
+    "static/js/main.70fb0c99.js"
   ]
 }
