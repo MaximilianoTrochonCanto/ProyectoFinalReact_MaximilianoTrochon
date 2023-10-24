@@ -29,19 +29,23 @@ return(
       </header>
       <Routes>
                                     
-        <Route path="/ProyectoFinalReact_MaximilianoTrochon" element={<Remeras/>} />                                    
-        <Route path="/ProyectoFinalReact_MaximilianoTrochon/cart" element={<Cart/>} />                    
-        <Route path="/ProyectoFinalReact_MaximilianoTrochon/checkout" element={<Checkout/>} />            
-        <Route path="/ProyectoFinalReact_MaximilianoTrochon/remeras" element={<Remeras/>} />                     
-        <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado' element={<Calzado/>}/>                    
-        <Route path='/ProyectoFinalReact_MaximilianoTrochon/accesorios' element={<Accesorios />}/>                             
-        <Route path='/ProyectoFinalReact_MaximilianoTrochon/motos' element={<Motos/>}/>                             
-        <Route path='/ProyectoFinalReact_MaximilianoTrochon/autos' element={<Autos/>}/>                             
-        <Route path='/ProyectoFinalReact_MaximilianoTrochon/televisores' element={<Televisores/>}/>                             
-        <Route path='/ProyectoFinalReact_MaximilianoTrochon/heladeras' element={<Heladeras/>}/>                             
-        <Route path="/ProyectoFinalReact_MaximilianoTrochon/:productId" element={<ItemDetail/>} />            
-        <Route path='/ProyectoFinalReact_MaximilianoTrochon/calzado/:productId' element={<ItemDetail/>}/>            
-        <Route path='/ProyectoFinalReact_MaximilianoTrochon/accesorios/:productId' element={<ItemDetail/>}/>           
+        <Route path="/" element={<Remeras/>} />                                    
+        <Route path="/cart" element={<Cart/>} />                    
+        <Route path="/checkout" element={<Checkout/>} />            
+        <Route path="/remeras" element={<Remeras/>} />                     
+        <Route path='/calzado' element={<Calzado/>}/>                    
+        <Route path='/accesorios' element={<Accesorios />}/>                             
+        <Route path='/motos' element={<Motos/>}/>                             
+        <Route path='/autos' element={<Autos/>}/>                             
+        <Route path='/televisores' element={<Televisores/>}/>                             
+        <Route path='/heladeras' element={<Heladeras/>}/>                             
+        <Route path="/:productId" element={<ItemDetail/>} />            
+        <Route path='/calzado/:productId' element={<ItemDetail/>}/>            
+        <Route path='/accesorios/:productId' element={<ItemDetail/>}/>           
+        <Route path='/motos/:productId' element={<ItemDetail/>}/>           
+        <Route path='/autos/:productId' element={<ItemDetail/>}/>           
+        <Route path='/televisores/:productId' element={<ItemDetail/>}/>           
+        <Route path='/heladeras/:productId' element={<ItemDetail/>}/>           
         </Routes>
     </Router>
     </ContextProvider> 

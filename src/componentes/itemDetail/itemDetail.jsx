@@ -50,25 +50,25 @@ const ItemDetail = () => {
  
    switch(prod.categoria){
     case "Remera":
-      url =  `/ProyectoFinalReact_MaximilianoTrochon`
+      url =  `/`
     break;
     case "Accesorio":
-      url = `/ProyectoFinalReact_MaximilianoTrochon/accesorios`;
+      url = `/accesorios`;
     break;
     case "Calzado":
-      url =  `/ProyectoFinalReact_MaximilianoTrochon/calzado`;
+      url =  `/calzado`;
     break;
     case "Auto":
-      url =  `/ProyectoFinalReact_MaximilianoTrochon/autos`;
+      url =  `/autos`;
     break;
     case "Moto":
-      url =  `/ProyectoFinalReact_MaximilianoTrochon/motos`;
+      url =  `/motos`;
     break;
     case "Heladera":
-      url =  `/ProyectoFinalReact_MaximilianoTrochon/heladeras`;
+      url =  `/heladeras`;
       break;
     case "Televisor":
-      url =  `/ProyectoFinalReact_MaximilianoTrochon/televisores`;
+      url =  `/televisores`;
     break;
    }
 

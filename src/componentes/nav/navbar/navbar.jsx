@@ -22,18 +22,18 @@ export const NavbarBootstrap = ({carrito}) => {
       <Navbar.Brand>Ventasmania</Navbar.Brand>
       <Nav className="me-auto">
         <NavDropdown title="Ropa">
-          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon">Remeras</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/calzado">Calzado</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/accesorios">Accesorios</NavDropdown.Item>        
+          <NavDropdown.Item as={Link} to="/">Remeras</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/calzado">Calzado</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/accesorios">Accesorios</NavDropdown.Item>        
         </NavDropdown>
         <NavDropdown title="Vehículos">
-          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/motos">Motos</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/autos">Autos</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/motos">Motos</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/autos">Autos</NavDropdown.Item>
           
         </NavDropdown>
         <NavDropdown title="Electrodomésticos">
-          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/televisores">Televisores</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/heladeras">Heladeras</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/televisores">Televisores</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/heladeras">Heladeras</NavDropdown.Item>
           
         </NavDropdown>
       </Nav>     

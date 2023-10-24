@@ -23,7 +23,7 @@ const Cart = () => {
                 <h3>
                     Tu carrito esta vacio.
                 </h3>
-                <Link className='btn btn-dark' to="/ProyectoFinalReact_MaximilianoTrochon/">Volver</Link>
+                <Link className='btn btn-dark' to="/">Volver</Link>
             </div>
         }
         </div>

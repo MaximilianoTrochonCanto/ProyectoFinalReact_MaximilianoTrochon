@@ -11,8 +11,8 @@ const Cartwidget = () => {
       <>
     {(carritoCantidad()>0 && <div className='notificacion' current-count={carritoCantidad()}></div>)}
     
-      <Link to="/ProyectoFinalReact_MaximilianoTrochon/cart">
-      <img className='cart' src="/ProyectoFinalReact_MaximilianoTrochon/imagenes/cart.png"  alt="" />
+      <Link to="/cart">
+      <img className='cart' src="/imagenes/cart.png"  alt="" />
       </Link>
       
     

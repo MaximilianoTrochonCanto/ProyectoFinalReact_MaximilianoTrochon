@@ -13,7 +13,32 @@ const Item = (props) => {
 
   let url;
   
-  (categoria === "Remera")?url = `/ProyectoFinalReact_MaximilianoTrochon/${id}`:(categoria === "Accesorio")?url = `/ProyectoFinalReact_MaximilianoTrochon/accesorios/${id}`:url = `/ProyectoFinalReact_MaximilianoTrochon/calzado/${id}`;
+
+  switch(categoria){
+    case "Remera":
+      url =  `/${id}`
+    break;
+    case "Accesorio":
+      url = `/accesorios/${id}`;
+    break;
+    case "Calzado":
+      url =  `/calzado/${id}`;
+    break;
+    case "Auto":
+      url =  `/autos/${id}`;
+    break;
+    case "Moto":
+      url =  `/motos/${id}`;
+    break;
+    case "Heladera":
+      url =  `/heladeras/${id}`;
+      break;
+    case "Televisor":
+      url =  `/televisores/${id}`;
+    break;
+   }
+
+  
   return (
 
     
