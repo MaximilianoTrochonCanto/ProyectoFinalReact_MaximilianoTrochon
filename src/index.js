@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
+import { HashRouter } from 'react-router-dom';
 
 
 
@@ -21,9 +22,9 @@ appId: "1:742065397373:web:491713df9769793e65db14"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <HashRouter>
     <App />
-  </React.StrictMode>
+  </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
