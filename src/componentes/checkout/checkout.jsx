@@ -42,9 +42,9 @@ const Checkout = () => {
     <div>
         {orderId !== ''
         ?<div>
-            <h2>Felicitaciones! Tu orden fue generada con exito</h2>
-            <h2>Su id de compra es: {orderId}</h2>
-            <Button className="btn btn-primary" as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/">Volver</Button>
+            <h2>Felicitaciones! Tu orden fue generada con exito.
+            Su id de compra es: {orderId}</h2>
+            <Button className="btn btn-primary" as={Link} to="/">Volver</Button>
         </div>
         :<div className='formulario'>
         <h3>Llená tus datos por favor.</h3>

@@ -20,7 +20,7 @@ export const NavbarBootstrap = ({carrito}) => {
     <Navbar bg="dark" data-bs-theme="dark" className="Navbar col-12">
     <Container>
       <Navbar.Brand>Ventasmania</Navbar.Brand>
-      <Nav className="me-auto">
+      <Nav className="me-auto linksmenu">
         <NavDropdown title="Ropa">
           <NavDropdown.Item as={Link} to="/">Remeras</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/calzado">Calzado</NavDropdown.Item>

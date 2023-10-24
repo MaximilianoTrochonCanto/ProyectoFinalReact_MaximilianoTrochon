@@ -16,7 +16,7 @@ const Cart = () => {
                 <p>Total a pagar: ${carritoTotal()}</p>
                 <div>
                     <button className='btn btn-danger' onClick={() => borrarTodo()}>Vaciar Carrito</button>
-                    <Link className='btn btn-dark' to="/ProyectoFinalReact_MaximilianoTrochon/checkout" >Terminar compra</Link>
+                    <Link className='btn btn-dark' to="/checkout" >Terminar compra</Link>
                 </div>
             </div>
             :<div className={"producto"}>

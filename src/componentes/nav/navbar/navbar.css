@@ -4,8 +4,8 @@
 
 
 @media (max-width:440px){
-    .Navbar{
-        font-size: xx-small;
+    .linksmenu{
+        font-size: xx-small !important;
     }
 }
 

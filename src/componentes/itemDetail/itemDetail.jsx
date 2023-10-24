@@ -78,11 +78,21 @@ const ItemDetail = () => {
     <div className='col-6 py-1 mt-3 mx-auto itemdetail'>      
     
       <h1>{prod.categoria} {prod.nombre}</h1>            
-      <img src={prod.urlImagen} />
-      {(prod.stock<0 && prod != null )?<p style={{color:"red"}}>Sin stock.</p>:<p>Stock: {prod.stock}</p>}      
+      <div>
+        <img src={prod.urlImagen} />
+      </div>
+      {(prod.stock<0 && prod != null )?<p style={{color:"red"}}>Sin stock.</p>
+      :(cantidadAgrega === '') 
+      ?<>
+      <p>Stock: {prod.stock}</p> 
       <p>Precio: ${prod.precio}</p> 
-      { cantidadAgrega === '' ? <ItemCount inicial={1} stock={prod.stock} id={prod.id} onAdd={onAdd}/>
-      : <Link to="/ProyectoFinalReact_MaximilianoTrochon/cart" className='btn btn-dark'>Ir al Carrito</Link>}
+      <ItemCount inicial={1} stock={prod.stock} id={prod.id} onAdd={onAdd}/>
+      </>
+      : 
+      <>
+      <Link to="/cart" className='btn btn-dark'>Ir al Carrito</Link>      
+      </>}
+       
       </div>                    
       <Button className="boton " as={Link} to={url}>Volver</Button>
         <Randomusers/>
