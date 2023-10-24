@@ -22,7 +22,7 @@ export const NavbarBootstrap = ({carrito}) => {
       <Navbar.Brand>Ventasmania</Navbar.Brand>
       <Nav className="me-auto">
         <NavDropdown title="Ropa">
-          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/remeras">Remeras</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon">Remeras</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/calzado">Calzado</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/ProyectoFinalReact_MaximilianoTrochon/accesorios">Accesorios</NavDropdown.Item>        
         </NavDropdown>
