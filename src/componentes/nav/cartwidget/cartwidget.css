@@ -29,7 +29,7 @@
 @media (max-width:990px){
     .notificacion::after{
         top:-31px;
-        right:-250px;
+        right:-255px;
     }    
 }
 @media (max-width:768px){
@@ -38,9 +38,11 @@
     }
 
     .notificacion::after{
-        top:-31px;
-        
-        right:-101px;
+        top:-27px;
+        width: 21px;
+        height:21px;
+        font-size: 7px;
+        right:-115px;
     }    
 }
 
@@ -50,7 +52,7 @@
     height: 19px;
     font-size: 6px;
     top:-25px;
-        right:-181px;
+        right:-189px;
     }    
     
     .cart {
@@ -63,45 +65,75 @@
         margin-left: 70%;
     }
     
-    
+    .notificacion::after{
+        width: 15px;
+    height: 15px;
+    font-size: 6px;
+    top:-24px;
+     right:-186px; 
+    }    
 }
 
 
-@media (max-width:557px){
+@media (max-width:563px){
     
 
     .notificacion::after{
         width: 15px;
     height: 15px;
     font-size: 6px;
-    top:-19px;
-        right:-160px;
+    top:-22px;
+     right:-170px; 
     }    
 
 }
 
 @media (max-width:540px){
     .notificacion::after{
-        right:-145px;
+        right:-148px;
     }
 }
 @media (max-width:523px){
     .notificacion::after{
-        right:-125px;
+        right:-142px;
     }
 }
-@media (max-width:505px){
+@media (max-width:513px){
     .notificacion::after{
-        right:-107px;
+        right:-120px;
+    }
+}
+@media (max-width:503px){
+    .notificacion::after{
+        right:-114px;
     }
 }
 
-@media (max-width:490px){
+@media (max-width:492px){
     .notificacion::after{
-        width: 8px;
-    height: 8px;
+        width: 10px;
+        top:-20px;
+    height: 10px;
     font-size: 2px;
-    right:-75px;
+    right:-120px;
+    }    
+}
+@media (max-width:476px){
+    .notificacion::after{
+        top:-14px;
+    right:-102px;
+    }    
+}
+@media (max-width:457px){
+    .notificacion::after{
+        
+    right:-88px;
+    }    
+}
+@media (max-width:445px){
+    .notificacion::after{
+        
+    right:-76px;
     }    
 }
 
@@ -111,6 +143,6 @@
     height: 5px;
     font-size: 2px;
     top:-12px;
-        right:-23px;
+        right:-26px;
     }    
 }
