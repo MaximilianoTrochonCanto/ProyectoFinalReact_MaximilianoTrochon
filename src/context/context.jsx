@@ -32,7 +32,7 @@ export const ContextProvider = (props) => {
     
 
     const estaEnCarrito = (id) =>{
-        return carritoItems.some((item) => item.id == id)
+        return carritoItems.some((item) => item.id === id)
     }
 
     const borrarItem = (id) => {

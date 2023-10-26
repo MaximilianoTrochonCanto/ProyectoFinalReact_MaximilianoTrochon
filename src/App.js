@@ -11,8 +11,7 @@ import Cart from './componentes/cart/cart';
 import Checkout from './componentes/checkout/checkout';
 import Motos from './paginas/Motos';
 import Autos from './paginas/Autos';
-import Televisores from './paginas/Televisores';
-import Heladeras from './paginas/Heladeras';
+import Electrodomesticos from './paginas/Electrodomesticos';
 
 
 
@@ -37,15 +36,13 @@ return(
         <Route path='/accesorios' element={<Accesorios />}/>                             
         <Route path='/motos' element={<Motos/>}/>                             
         <Route path='/autos' element={<Autos/>}/>                             
-        <Route path='/televisores' element={<Televisores/>}/>                             
-        <Route path='/heladeras' element={<Heladeras/>}/>                             
+        <Route path='/electrodomesticos' element={<Electrodomesticos/>}/>                                             
         <Route path="/:productId" element={<ItemDetail/>} />            
         <Route path='/calzado/:productId' element={<ItemDetail/>}/>            
         <Route path='/accesorios/:productId' element={<ItemDetail/>}/>           
         <Route path='/motos/:productId' element={<ItemDetail/>}/>           
         <Route path='/autos/:productId' element={<ItemDetail/>}/>           
-        <Route path='/televisores/:productId' element={<ItemDetail/>}/>           
-        <Route path='/heladeras/:productId' element={<ItemDetail/>}/>           
+        <Route path='/electrodomesticos/:productId' element={<ItemDetail/>}/>                   
         </Routes>
     </Router>
     </ContextProvider> 

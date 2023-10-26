@@ -30,12 +30,10 @@ const Item = (props) => {
     case "Moto":
       url =  `/motos/${id}`;
     break;
-    case "Heladera":
-      url =  `/heladeras/${id}`;
+    case "Electrodomestico":
+      url =  `/electrodomesticos/${id}`;
       break;
-    case "Televisor":
-      url =  `/televisores/${id}`;
-    break;
+   
    }
 
   

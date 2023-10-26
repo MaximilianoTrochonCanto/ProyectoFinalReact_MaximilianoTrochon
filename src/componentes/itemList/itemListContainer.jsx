@@ -22,7 +22,7 @@ const ItemListContainer = ({categoria,greetings}) => {
 
     },[])
 
-    const prodsFilter = prods.filter(p => p.categoria == categoria)
+    const prodsFilter = prods.filter(p => p.categoria === categoria)
 
 
     return (

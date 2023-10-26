@@ -31,11 +31,7 @@ export const NavbarBootstrap = ({carrito}) => {
           <NavDropdown.Item as={Link} to="/autos">Autos</NavDropdown.Item>
           
         </NavDropdown>
-        <NavDropdown title="Electrodomésticos">
-          <NavDropdown.Item as={Link} to="/televisores">Televisores</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/heladeras">Heladeras</NavDropdown.Item>
-          
-        </NavDropdown>
+        <NavLink as={Link} to="/electrodomesticos">Electrodomesticos</NavLink>        
       </Nav>     
               
         <Cartwidget  />                                       

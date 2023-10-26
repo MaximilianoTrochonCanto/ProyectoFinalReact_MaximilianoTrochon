@@ -4,6 +4,10 @@
     text-align: center;
 }
 
+h1{
+    font-size: 1.1rem;
+}
+
 .itemdetail{
     font-weight: bold;
 }
@@ -16,4 +20,10 @@
 
 .volver{
     width: 10%;
+}
+
+@media (max-width:590px){
+    h1{
+        font-size: 1rem;
+    }
 }

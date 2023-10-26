@@ -64,12 +64,10 @@ const ItemDetail = () => {
     case "Moto":
       url =  `/motos`;
     break;
-    case "Heladera":
-      url =  `/heladeras`;
+    case "Electrodomestico":
+      url =  `/electrodomesticos`;
       break;
-    case "Televisor":
-      url =  `/televisores`;
-    break;
+    
    }
 
     return (
@@ -77,7 +75,9 @@ const ItemDetail = () => {
 
     <div className='col-6 py-1 mt-3 mx-auto itemdetail'>      
     
-      <h1>{prod.categoria} {prod.nombre}</h1>            
+
+    
+      <h1>{(prod.categoria!=="Electrodomestico")?prod.categoria:""} {prod.nombre}</h1>            
       <div>
         <img src={prod.urlImagen} />
       </div>
