@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import { doc,  getFirestore, updateDoc } from 'firebase/firestore'
 
 export const CarritoContext = createContext()
@@ -10,7 +10,12 @@ export const CarritoContext = createContext()
 export const ContextProvider = (props) => {
 
     const db = getFirestore();
-  const [carritoItems, setCarritoItems] = useState([])
+    const carritoAlmacenado = JSON.parse(localStorage.getItem("carrito")) || []
+  const [carritoItems, setCarritoItems] = useState(carritoAlmacenado)
+
+    useEffect(() => {
+        localStorage.setItem("carrito",JSON.stringify(carritoItems))
+    },[carritoItems])
 
     const agregarAlCarrito = (prod,cantidad) => {
         (!estaEnCarrito(prod.id))               
@@ -60,6 +65,7 @@ export const ContextProvider = (props) => {
     } 
 
     const carritoCantidad = () => {
+        
         return carritoItems.reduce((acc, item) => acc + item.cantidad, 0)
     }
     
