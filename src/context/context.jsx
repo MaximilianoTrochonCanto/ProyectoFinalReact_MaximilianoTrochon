@@ -61,7 +61,7 @@ export const ContextProvider = (props) => {
            
         const producto = doc(db,"Productos",productoId)
             
-       if(prods.some((p) => p.id === producto))
+       if(prods.some((p) => p.id === producto.id))
         await updateDoc(producto,{
           stock: prod.stock - cant
         })
