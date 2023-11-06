@@ -1,26 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import {collection, getDocs, getFirestore} from 'firebase/firestore'
+import React, { useContext } from 'react'
 
 import Item from '../item/item'
 import './itemListContainer.css'
+import { CarritoContext } from '../../context/context'
 
 
 
 const ItemListContainer = ({categoria,greetings}) => {
       
-    const [prods,setProds] = useState([])
-    const db = getFirestore();
+    const {prods} = useContext(CarritoContext)
     
     
-    useEffect(() =>{
-        const pCollection = collection(db, "Productos")
-        getDocs(pCollection).then((snapshot) => {          
-            setProds(snapshot.docs.map((doc) =>({ id: doc.id, ...doc.data() })))                        
-        })
-        
-
-
-    },[])
+    
+    
 
     const prodsFilter = prods.filter(p => p.categoria === categoria)
 

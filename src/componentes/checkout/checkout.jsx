@@ -22,6 +22,10 @@ const Checkout = () => {
     }
 
     const finalizarCompra = (e) => {
+
+        
+
+
         e.preventDefault()
         let orden = {
             usuario,

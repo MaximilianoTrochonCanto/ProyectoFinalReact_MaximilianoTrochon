@@ -7,7 +7,7 @@ import CartItem from '../cartItem/cartItem'
 const Cart = () => {
     const {carritoItems, borrarTodo ,  carritoTotal} = useContext(CarritoContext)
 
-    console.log(carritoItems)
+    
     return (
         <div>
             {carritoItems.length

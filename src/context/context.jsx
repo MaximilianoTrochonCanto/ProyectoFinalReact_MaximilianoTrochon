@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react'
-import { doc,  getFirestore, updateDoc } from 'firebase/firestore'
+import { doc,  getFirestore, updateDoc, collection, getDocs } from 'firebase/firestore'
 
 export const CarritoContext = createContext()
 
@@ -9,9 +9,20 @@ export const CarritoContext = createContext()
 
 export const ContextProvider = (props) => {
 
+    
     const db = getFirestore();
     const carritoAlmacenado = JSON.parse(localStorage.getItem("carrito")) || []
+    
+        
+    
   const [carritoItems, setCarritoItems] = useState(carritoAlmacenado)
+  const [prods,setProds] = useState([])
+
+  useEffect(() =>{
+    const pCollection = collection(db, "Productos")
+    getDocs(pCollection).then((snapshot) => {          
+        setProds(snapshot.docs.map((doc) =>({ id: doc.id, ...doc.data() })))                        
+    })},[])
 
     useEffect(() => {
         localStorage.setItem("carrito",JSON.stringify(carritoItems))
@@ -50,7 +61,7 @@ export const ContextProvider = (props) => {
            
         const producto = doc(db,"Productos",productoId)
             
-       
+       if(prods.some((p) => p.id === producto))
         await updateDoc(producto,{
           stock: prod.stock - cant
         })
@@ -73,7 +84,7 @@ export const ContextProvider = (props) => {
         return carritoItems.reduce((acc, item) => acc + item.precio * item.cantidad, 0)
     }
 
-const contextValues = {carritoItems, carritoCantidadProd, reintegrarStock, agregarAlCarrito,  borrarTodo, borrarItem, carritoCantidad, carritoTotal}
+const contextValues = {carritoItems, prods, carritoCantidadProd, reintegrarStock, agregarAlCarrito,  borrarTodo, borrarItem, carritoCantidad, carritoTotal}
 
 
   return <CarritoContext.Provider value={contextValues}>{props.children}</CarritoContext.Provider>
