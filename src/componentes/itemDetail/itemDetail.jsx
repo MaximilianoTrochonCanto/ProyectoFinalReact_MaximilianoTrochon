@@ -43,7 +43,7 @@ const ItemDetail = () => {
   
   if (loading) {
     return <div className='itemdetail'>
-      <p>Cargando...</p>;
+      <p>Cargando...</p>
 
     </div>
     
