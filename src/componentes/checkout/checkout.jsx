@@ -67,7 +67,7 @@ const Checkout = () => {
                 <label className='form-label'>Repita su E-mail:</label>
                 <input type='text' onChange={((e) => setValidarMail(e.target.value))} className='form-control' placeholder='Correo electrónico' name='email'></input>
             </div>
-            <button className='btn btn-dark' disabled={validarMail != usuario.email || usuario.name === null || usuario.telefono === 0} type='submit'>Generar orden</button>
+            <button className='btn btn-dark' disabled={validarMail !== usuario.email || usuario.name === null || usuario.telefono === 0} type='submit'>Generar orden</button>
         </form>
     </div>}
 
