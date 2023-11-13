@@ -10,7 +10,7 @@ const Randomusers = () => {
             try {
                 const response = await fetch(urlApi);
                 if (!response.ok) {
-                    throw new Error('Error en la red');
+                    throw new Error('Ha ocurrido un error con la API.');
                 }
                 const data = await response.json();
                 setUsers(data.results);
